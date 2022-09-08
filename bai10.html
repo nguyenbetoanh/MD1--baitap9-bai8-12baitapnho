@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--                  Bài 10: Viết chương trình tính giá điện.-->
+<h2>Tính giá điện</h2>
+Nhập số điện đã dùng <br>
+<input id="nhap1" type="text"><br>
+Nhập số ngày đã dùng <br>
+<input id="nhap2" type="text"><br>
+<button onclick="bamKiemTra()">Kiểm tra</button>
+<h1 id="kq"></h1>
+<script>
+  function bamKiemTra() {
+    let soDien = document.getElementById('nhap1').value
+    let ngay = document.getElementById('nhap2').value
+    let soTienTra
+    if (soDien <= 50) {
+     soTienTra = soDien * ngay*1.676
+    } else if (soDien<=100) {
+        soTienTra= soDien * ngay*1.734
+    }else if(soDien<=200){
+      soTienTra= soDien * ngay*2.014
+    }else if(soDien<=300){
+        soTienTra= soDien * ngay*2.536
+    }else if(soDien<=400){
+        soTienTra= soDien * ngay*2.834
+    }else
+        soTienTra= soDien * ngay*2.927
+    document.getElementById('kq').innerHTML = 'Số tiền phải trả là' + soTienTra+ " đồng"
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để-->
+<!--a,b,c là cạnh của một tam giác là:-->
+<!--a,b,c > 0-->
+<!--a + b > c-->
+<!--b + c > a-->
+<!--a + c > b-->
+<h2>Kiểm tra a b c có phải cạnh của 1 tam giác không ?</h2>
+Nhập a vào <br>
+<input id="nhap1" type="text"><br>
+Nhập b vào <br>
+<input id="nhap2" type="text"><br>
+Nhập c vào <br>
+<input id="nhap3" type="text"><br>
+<button onclick="bamKiemTra()">Kiểm tra</button>
+<h1 id="kq"></h1>
+<script>
+    function bamKiemTra() {
+        let a = +document.getElementById('nhap1').value
+        let b = +document.getElementById('nhap2').value
+        let c = +document.getElementById('nhap3').value
+        if (a, b, c > 0 && a + b > c && b + c > a && a + c > b){
+            document.getElementById('kq').innerHTML = 'a , b ,c là 3 cạnh của 1 tam giác'
+        }else
+            document.getElementById('kq').innerHTML = 'a , b ,c không là 3 cạnh của 1 tam giác'
+    }
+</script>
+</body>
+</html>
+</body>
+</html>

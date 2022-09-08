@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--                                    bài 7 Giải phương trình bậc 2.-->
+<h2>Giải phương trình bậc 2</h2>
+Nhập a vào <br>
+<input id="nhap1" type="text"><br>
+Nhập b vào <br>
+<input id="nhap2" type="text"><br><br>
+Nhập c vào <br>
+<input id="nhap3" type="text"><br><br>
+<button onclick="bamKiemTra()">Kiểm tra</button>
+<h1 id="kq"></h1>
+<script>
+  function bamKiemTra() {
+    let a = +document.getElementById('nhap1').value
+    let b = +document.getElementById('nhap2').value
+    let c = +document.getElementById('nhap3').value
+    let  delta = b*b - 4*a*c
+    let kq1=-b/a*2
+    let kq2= (-b + Math.sqrt(delta))/(2*a)
+    let kq3=(-b - Math.sqrt(delta))/(2*a);
+    console.log(delta)
+    console.log(kq1)
+    console.log(kq2)
+    console.log(kq3)
+    if (delta<0){
+      document.getElementById('kq').innerHTML ='Phương trình vô nghiệm'
+    }else if (delta==0){
+      document.getElementById('kq').innerHTML = 'Phương trình có 1 nghiệm duy nhất là x1=x2='+kq1
+  }else
+  document.getElementById('kq').innerHTML = 'Phương trình có 2 nghiệm  là x1='+kq2 +' x2='+kq3
+  }
+</script>
+</body>
+</html>
+<!--test  1,-4,+4 :nghiem kep-->
+<!--test 3 2 5 :vo nghiem-->
+<!--test 2 -7 3 :2 nhiem-->

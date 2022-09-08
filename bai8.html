@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--           Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của-->
+<!--           một người khi nhỏ 120 và lớn hơn 0-->
+<h2>Xác định số nhập vào có phải là tuổi 1 người hay không ?</h2>
+Nhập 1 số bất kì vào <br>
+<input id="nhap1" type="text"><br>
+<button onclick="bamKiemTra()">Kiểm tra</button>
+<h1 id="kq"></h1>
+<script>
+  function bamKiemTra() {
+    let a = document.getElementById('nhap1').value
+    if (a > 0 && a < 120 ) {
+      document.getElementById('kq').innerHTML = 'Số ' + a + " là số tuổi của 1 người"
+    } else
+      document.getElementById('kq').innerHTML = a + "  không là số tuổi của 1 người"
+  }
+</script>
+</body>
+</html>
